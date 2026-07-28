@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4b92c7">
+  <meta name="description" content="Apoio pedagógico da Lição 7 da Classe Adolescentes: Salomão, o sábio que se tornou insensato.">
+  <title>Lição 7 — Salomão, o sábio que se tornou insensato | Apoio Pedagógico Adolescentes</title>
+  <style>
+    :root {
+      --azul: #4b92c7;
+      --azul-escuro: #1e527b;
+      --azul-claro: #eaf5fc;
+      --laranja: #ff6f1f;
+      --laranja-claro: #fff1e8;
+      --verde: #2f855a;
+      --verde-claro: #edf9f1;
+      --amarelo: #f4b740;
+      --amarelo-claro: #fff9e6;
+      --roxo: #6b46c1;
+      --roxo-claro: #f5f0ff;
+      --texto: #24313d;
+      --muted: #5e6e7c;
+      --linha: #d8e3ec;
+      --papel: #ffffff;
+      --fundo: #eef5fa;
+      --sombra: 0 14px 38px rgba(27, 72, 106, 0.13);
+      --raio: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(75, 146, 199, 0.18), transparent 34rem),
+        linear-gradient(180deg, #f8fbfd 0%, var(--fundo) 100%);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; }
+
+    .pagina {
+      width: min(1120px, calc(100% - 24px));
+      margin: 24px auto 56px;
+    }
+
+    .banner {
+      overflow: hidden;
+      border-radius: var(--raio);
+      background: var(--azul);
+      box-shadow: var(--sombra);
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .barra-acoes {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .botao {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 17px;
+      color: #fff;
+      background: var(--azul-escuro);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .botao:hover,
+    .botao:focus-visible {
+      background: var(--laranja);
+      outline: 3px solid rgba(255, 111, 31, 0.25);
+    }
+
+    .licao-viver {
+      overflow: hidden;
+      border: 1px solid rgba(75, 146, 199, 0.2);
+      border-radius: var(--raio);
+      background: var(--papel);
+      box-shadow: var(--sombra);
+    }
+
+    .titulo-licao {
+      padding: clamp(24px, 5vw, 46px);
+      color: #fff;
+      background:
+        linear-gradient(125deg, rgba(30, 82, 123, 0.98), rgba(75, 146, 199, 0.94)),
+        var(--azul);
+    }
+
+    .titulo-licao .selo {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .titulo-licao h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(2rem, 5.3vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .titulo-licao p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.05rem;
+    }
+
+    .conteudo {
+      padding: clamp(18px, 4vw, 42px);
+    }
+
+    .bloco {
+      margin: 0 0 22px;
+      padding: clamp(18px, 3vw, 28px);
+      border: 1px solid var(--linha);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .bloco h2,
+    .bloco h3,
+    .bloco h4 {
+      margin-top: 0;
+      color: var(--azul-escuro);
+      line-height: 1.22;
+    }
+
+    .bloco h2 { font-size: clamp(1.45rem, 3vw, 2.2rem); }
+    .bloco h3 { font-size: 1.2rem; }
+    .bloco h4 { margin-bottom: 6px; font-size: 1.02rem; }
+
+    .bloco p:last-child,
+    .bloco ul:last-child,
+    .bloco ol:last-child { margin-bottom: 0; }
+
+    .meta {
+      background: linear-gradient(180deg, #f7fbfe, var(--azul-claro));
+      border-color: #bcdcf1;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .meta-item {
+      padding: 15px;
+      border: 1px solid rgba(75, 146, 199, 0.22);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .meta-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--azul-escuro);
+      font-size: 0.77rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .versiculo-chave {
+      margin: 18px 0 0;
+      padding: 17px 19px;
+      border-left: 6px solid var(--laranja);
+      border-radius: 0 12px 12px 0;
+      background: var(--laranja-claro);
+      color: #67351d;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-style: italic;
+    }
+
+    .ponto-partida {
+      border-left: 7px solid var(--amarelo);
+      background: var(--amarelo-claro);
+    }
+
+    .roteiro {
+      border-left: 7px solid var(--roxo);
+      background: var(--roxo-claro);
+    }
+
+    .tempo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tempo-item {
+      padding: 13px 10px;
+      border: 1px solid rgba(107, 70, 193, 0.2);
+      border-radius: 12px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .tempo-item strong {
+      display: block;
+      color: var(--roxo);
+      font-size: 1.1rem;
+    }
+
+    .introducao {
+      background: #fbfdff;
+    }
+
+    .perguntas {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .pergunta {
+      padding: 15px;
+      border: 1px dashed #8ab9d8;
+      border-radius: 13px;
+      background: var(--azul-claro);
+      font-weight: 700;
+    }
+
+    .topico {
+      border-top: 6px solid var(--azul);
+      background: #fff;
+    }
+
+    .topico-numero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-right: 8px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--azul);
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .subtopico {
+      margin-top: 16px;
+      padding: 16px 17px;
+      border-left: 4px solid #9bc7e4;
+      border-radius: 0 12px 12px 0;
+      background: #f8fbfd;
+    }
+
+    .apoio-pedagogico {
+      border-left: 7px solid var(--laranja);
+      background: var(--laranja-claro);
+    }
+
+    .apoio-pedagogico h3 { color: #8b3e12; }
+
+    .aplicacao-pratica {
+      border-left: 7px solid var(--verde);
+      background: var(--verde-claro);
+    }
+
+    .aplicacao-pratica h3 { color: #21633f; }
+
+    .atividade {
+      border-top: 6px solid var(--amarelo);
+      background: var(--amarelo-claro);
+    }
+
+    .passos {
+      counter-reset: passo;
+      list-style: none;
+      padding: 0;
+    }
+
+    .passos li {
+      position: relative;
+      margin: 12px 0;
+      padding: 4px 0 4px 44px;
+    }
+
+    .passos li::before {
+      counter-increment: passo;
+      content: counter(passo);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--laranja);
+      font-weight: 900;
+    }
+
+    .nota-pastoral {
+      border-left: 7px solid #c53030;
+      background: #fff5f5;
+    }
+
+    .nota-pastoral h3 { color: #9b2c2c; }
+
+    .fixacao {
+      border-top: 6px solid var(--roxo);
+    }
+
+    .fixacao ol { padding-left: 22px; }
+
+    details {
+      margin-top: 18px;
+      border: 1px solid #d8caef;
+      border-radius: 12px;
+      background: var(--roxo-claro);
+    }
+
+    summary {
+      padding: 14px 16px;
+      color: var(--roxo);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    details div { padding: 0 18px 18px; }
+
+    .conclusao {
+      border-top: 6px solid var(--verde);
+      background: linear-gradient(180deg, #f8fffa, var(--verde-claro));
+    }
+
+    .sintese {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 13px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+      font-weight: 800;
+    }
+
+    .oracao {
+      border-left: 7px solid var(--roxo);
+      background: var(--roxo-claro);
+    }
+
+    .rodape {
+      padding: 24px;
+      color: #dbefff;
+      background: var(--azul-escuro);
+      text-align: center;
+      font-size: 0.84rem;
+    }
+
+    .rodape strong { color: #fff; }
+
+    @media (max-width: 780px) {
+      .pagina { width: min(100% - 12px, 1120px); margin-top: 6px; }
+      .banner, .licao-viver { border-radius: 12px; }
+      .meta-grid, .perguntas { grid-template-columns: 1fr; }
+      .tempo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .barra-acoes { padding: 0 6px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .pagina { width: 100%; margin: 0; }
+      .barra-acoes { display: none; }
+      .banner, .licao-viver { box-shadow: none; border-radius: 0; }
+      .bloco { break-inside: avoid; }
+      .topico { break-inside: auto; }
+      details > div { display: block !important; }
+      details { break-inside: avoid; }
+      .rodape { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+    <header class="banner"><img src="assets/logo-apoio-pedagogico-adolescentes.png" alt="Adolescentes — Apoio Pedagógico — 15 a 17 anos"></header>
+    <div class="barra-acoes"><button class="botao" type="button" onclick="window.print()">Imprimir / Salvar em PDF</button></div>
+    <article class="licao-viver adolescentes">
+      <header class="titulo-licao"><span class="selo">Viver+ • 3º trimestre de 2026</span><h1>Lição 7: Salomão, o sábio que se tornou insensato</h1><p>Material bíblico e pedagógico para auxiliar o professor da Classe Adolescentes, de 15 a 17 anos, na preparação e condução da aula.</p></header>
+      <div class="conteudo">
+        <section class="bloco meta"><h2>📘 Identidade da lição</h2><div class="meta-grid">
+          <div class="meta-item"><strong>Versículo-chave</strong>“Filho meu, ouve a instrução de teu pai e não deixes a doutrina de tua mãe. Porque diadema de graça serão para a tua cabeça e colares para o teu pescoço”, Pv 1.8,9.</div>
+          <div class="meta-item"><strong>Objetivo da Lição</strong>Compreender que uma vida plena e abençoada, se fundamenta na sabedoria, na obediência a Deus e aos pais.</div>
+          <div class="meta-item"><strong>Personagem em destaque</strong>Salomão, rei que recebeu sabedoria, mas deixou de viver de acordo com ela.</div>
+          <div class="meta-item"><strong>Verdade central</strong>Sabedoria não é apenas conhecer o certo; é permanecer obediente a Deus e praticar o que Ele ensina.</div>
+        </div><blockquote class="versiculo-chave">“Filho meu, ouve a instrução de teu pai e não deixes a doutrina de tua mãe. Porque diadema de graça serão para a tua cabeça e colares para o teu pescoço”, Pv 1.8,9.</blockquote></section>
+        <section class="bloco ponto-partida"><h2>🚩 Ponto de Partida</h2><p>Apresente o contraste central: Salomão começou reconhecendo sua limitação e terminou confiando demais em riqueza, alianças e desejos pessoais.</p><p>A lição ajuda a discutir inteligência, conhecimento e sabedoria. Uma pessoa pode saber muito e ainda tomar decisões ruins quando abandona o temor de Deus.</p><p><strong>Pergunta de abertura:</strong> Por que alguém que sabe o que é certo pode escolher fazer o errado?</p></section>
+        <section class="bloco roteiro"><h2>⏱️ Roteiro sugerido para 60 minutos</h2><div class="tempo-grid"><div class="tempo-item"><strong>8 min</strong>Acolhimento e pergunta inicial</div><div class="tempo-item"><strong>10 min</strong>Versículo-chave e introdução</div><div class="tempo-item"><strong>27 min</strong>Desenvolvimento dos tópicos</div><div class="tempo-item"><strong>10 min</strong>Atividade em grupo</div><div class="tempo-item"><strong>5 min</strong>Síntese e oração</div></div></section>
+        <section class="bloco introducao"><h2>💬 Introdução</h2><p>Salomão pediu um coração entendido para governar. Deus respondeu e lhe concedeu também riqueza e honra. Seu início foi marcado por humildade e serviço.</p><p>Com o tempo, a fama e o prazer ganharam espaço. A sabedoria que deveria orientar a vida tornou-se apenas capacidade, enquanto o coração se afastava do Senhor.</p><div class="perguntas"><div class="pergunta">Qual pedido você faria a Deus?</div><div class="pergunta">Conhecimento garante boas decisões?</div><div class="pergunta">Como sucesso pode se tornar um risco espiritual?</div></div></section>
+        <section class="bloco topico"><h2><span class="topico-numero">1</span> O PEDIDO DE SALOMÃO</h2><p>Salomão reconheceu que era jovem e precisava de ajuda para governar. Seu pedido revelou humildade e preocupação com o povo.</p><div class="subtopico"><h4>1.1 Reconhecer limites é sabedoria</h4><p>A pessoa madura não finge saber tudo. Ela pede ajuda, estuda e busca direção de Deus.</p></div><div class="subtopico"><h4>1.2 Pedidos revelam prioridades</h4><p>Salomão poderia pedir vantagens pessoais, mas pediu capacidade para servir. Nossas orações mostram o que valorizamos.</p></div><div class="subtopico"><h4>1.3 Conselhos preparam o futuro</h4><p>Davi orientou o filho antes de morrer. Ouvir quem já caminhou pode evitar erros previsíveis.</p></div></section>
+<section class="bloco apoio-pedagogico"><h3>🧑‍🏫 Apoio Pedagógico — Tópico 1</h3><p>Peça que os alunos escrevam três pedidos que fariam a Deus e classifiquem: consumo, conforto, caráter ou serviço.</p><p>Mostre que Deus não condena necessidades materiais, mas chama a colocar seu Reino no centro.</p></section>
+<section class="bloco aplicacao-pratica"><h3>✍️ Aplicação Prática — Tópico 1</h3><p>Durante a semana, o adolescente fará uma oração diária pedindo sabedoria para uma decisão específica.</p></section><section class="bloco topico"><h2><span class="topico-numero">2</span> A SABEDORIA DE SALOMÃO</h2><p>A sabedoria de Salomão trouxe organização, justiça e reconhecimento. Ele entendeu que liderança significa servir ao povo de Deus.</p><div class="subtopico"><h4>2.1 Sabedoria produz serviço</h4><p>Conhecimento bíblico deve melhorar a forma de tratar pessoas, resolver conflitos e assumir responsabilidades.</p></div><div class="subtopico"><h4>2.2 Propósito exige preparo</h4><p>Salomão planejou, administrou e trabalhou. Fé não substitui estudo e organização.</p></div><div class="subtopico"><h4>2.3 Generosidade combate egoísmo</h4><p>O coração sábio reconhece que recursos e dons foram recebidos para abençoar outros.</p></div></section>
+<section class="bloco apoio-pedagogico"><h3>🧑‍🏫 Apoio Pedagógico — Tópico 2</h3><p>Apresente um problema prático de classe e peça soluções sábias, avaliando impacto, justiça e viabilidade.</p><p>Diferencie resposta rápida de resposta sábia: a segunda considera princípios e consequências.</p></section>
+<section class="bloco aplicacao-pratica"><h3>✍️ Aplicação Prática — Tópico 2</h3><p>Escolha uma responsabilidade real — estudos, casa ou igreja — e prepare um pequeno plano de melhoria.</p></section><section class="bloco topico"><h2><span class="topico-numero">3</span> SABEDORIA E PECADO NÃO COMBINAM</h2><p>Salomão deixou de vigiar o coração. Riqueza, relacionamentos e alianças ocuparam o lugar da obediência, e a sabedoria não impediu sua queda.</p><div class="subtopico"><h4>3.1 Sucesso pode produzir autossuficiência</h4><p>Quando tudo parece funcionar, a pessoa pode parar de orar, ouvir e prestar contas.</p></div><div class="subtopico"><h4>3.2 Saber sem praticar endurece</h4><p>Conhecer princípios e ignorá-los repetidamente torna a consciência menos sensível.</p></div><div class="subtopico"><h4>3.3 Vigilância precisa continuar</h4><p>Uma boa história com Deus não garante fidelidade automática no futuro. É preciso perseverar diariamente.</p></div></section>
+<section class="bloco apoio-pedagogico"><h3>🧑‍🏫 Apoio Pedagógico — Tópico 3</h3><p>Construa um ‘painel de manutenção espiritual’: Palavra, oração, comunhão, serviço e prestação de contas.</p><p>Evite apresentar a queda como súbita; mostre acúmulo de concessões e prioridades deslocadas.</p></section>
+<section class="bloco aplicacao-pratica"><h3>✍️ Aplicação Prática — Tópico 3</h3><p>Cada aluno escolherá uma prática espiritual que precisa retomar ou fortalecer e combinará acompanhamento com alguém confiável.</p></section>
+        <section class="bloco atividade"><h2>🎯 Atividade em grupo — “O que você pediria?”</h2><p><strong>Objetivo:</strong> avaliar prioridades e compreender a sabedoria como capacidade de servir.</p><ol class="passos"><li>Leia resumidamente 1 Reis 3 e apresente o pedido de Salomão.</li><li>Cada aluno escreve, sem assinar, o que pediria a Deus.</li><li>Leia algumas respostas e agrupe por temas.</li><li>Pergunte quais pedidos ajudam apenas a pessoa e quais também beneficiam outros.</li><li>Finalize pedindo sabedoria para servir e permanecer fiel.</li></ol><p><strong>Material:</strong> papéis pequenos, canetas e quadro. <strong>Tempo estimado:</strong> 10 a 12 minutos.</p></section>
+        <section class="bloco nota-pastoral"><h3>🛡️ Nota pastoral e de proteção</h3><p>Não trate sucesso, riqueza ou estudo como pecados em si. O problema é quando ocupam o lugar de Deus e passam a governar decisões.</p><p>Evite prometer que sabedoria sempre produzirá ausência de dificuldades; ela orienta fidelidade dentro delas.</p></section>
+        <section class="bloco fixacao"><h2>🧠 Perguntas para interação e fixação</h2><ol><li>O que Salomão pediu?</li><li>O que seu pedido revelou?</li><li>Como sabedoria difere de inteligência?</li><li>Por que servir é parte da liderança?</li><li>Como sucesso pode gerar risco?</li><li>Por que conhecer não basta?</li><li>Que práticas mantêm vigilância?</li><li>Qual decisão precisa de sabedoria hoje?</li></ol><details><summary>Orientações de resposta para o professor</summary><div><p><strong>1.</strong> Um coração entendido para julgar o povo. <strong>2.</strong> Humildade e prioridade no serviço. <strong>3.</strong> Sabedoria aplica conhecimento segundo Deus. <strong>4.</strong> Porque autoridade existe para o bem de outros. <strong>5.</strong> Pode produzir autossuficiência e vaidade. <strong>6.</strong> É necessário obedecer e praticar. <strong>7.</strong> Palavra, oração, comunhão, serviço e prestação de contas. <strong>8.</strong> Resposta pessoal.</p></div></details></section>
+        <section class="bloco conclusao"><h2>✅ Conclusão</h2><p>Salomão começou bem porque reconheceu sua dependência de Deus. Sua queda ocorreu quando deixou de viver segundo a sabedoria recebida.</p><p>Adolescentes precisam aprender que conhecimento bíblico deve transformar hábitos. Permanecer fiel é mais importante do que apenas começar com entusiasmo.</p><div class="sintese">SÍNTESE DA LIÇÃO: A verdadeira sabedoria nasce do temor de Deus, orienta o serviço e precisa ser praticada com perseverança.</div></section>
+        <section class="bloco oracao"><h2>🙏 Oração final sugerida</h2><p>Senhor, dá-nos um coração sábio e obediente. Livra-nos da vaidade e da autossuficiência. Ajuda-nos a usar conhecimento, dons e oportunidades para servir e permanecer fiéis. Amém.</p></section>
+      </div>
+      <footer class="rodape"><strong>EBD Fiel — Apoio Pedagógico Adolescentes</strong><br>Material autoral de apoio à preparação da aula • Classe de 15 a 17 anos • 3º trimestre de 2026</footer>
+    </article>
+  </main>
+</body>
+</html>

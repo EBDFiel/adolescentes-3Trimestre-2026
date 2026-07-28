@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4b92c7">
+  <meta name="description" content="Apoio pedagógico da Lição 2 da Classe Adolescentes: Esaú e Jacó: inveja, rivalidade e ressentimento.">
+  <title>Lição 2 — Esaú e Jacó: inveja, rivalidade e ressentimento | Apoio Pedagógico Adolescentes</title>
+  <style>
+    :root {
+      --azul: #4b92c7;
+      --azul-escuro: #1e527b;
+      --azul-claro: #eaf5fc;
+      --laranja: #ff6f1f;
+      --laranja-claro: #fff1e8;
+      --verde: #2f855a;
+      --verde-claro: #edf9f1;
+      --amarelo: #f4b740;
+      --amarelo-claro: #fff9e6;
+      --roxo: #6b46c1;
+      --roxo-claro: #f5f0ff;
+      --texto: #24313d;
+      --muted: #5e6e7c;
+      --linha: #d8e3ec;
+      --papel: #ffffff;
+      --fundo: #eef5fa;
+      --sombra: 0 14px 38px rgba(27, 72, 106, 0.13);
+      --raio: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(75, 146, 199, 0.18), transparent 34rem),
+        linear-gradient(180deg, #f8fbfd 0%, var(--fundo) 100%);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; }
+
+    .pagina {
+      width: min(1120px, calc(100% - 24px));
+      margin: 24px auto 56px;
+    }
+
+    .banner {
+      overflow: hidden;
+      border-radius: var(--raio);
+      background: var(--azul);
+      box-shadow: var(--sombra);
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .barra-acoes {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .botao {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 17px;
+      color: #fff;
+      background: var(--azul-escuro);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .botao:hover,
+    .botao:focus-visible {
+      background: var(--laranja);
+      outline: 3px solid rgba(255, 111, 31, 0.25);
+    }
+
+    .licao-viver {
+      overflow: hidden;
+      border: 1px solid rgba(75, 146, 199, 0.2);
+      border-radius: var(--raio);
+      background: var(--papel);
+      box-shadow: var(--sombra);
+    }
+
+    .titulo-licao {
+      padding: clamp(24px, 5vw, 46px);
+      color: #fff;
+      background:
+        linear-gradient(125deg, rgba(30, 82, 123, 0.98), rgba(75, 146, 199, 0.94)),
+        var(--azul);
+    }
+
+    .titulo-licao .selo {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .titulo-licao h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(2rem, 5.3vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .titulo-licao p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.05rem;
+    }
+
+    .conteudo {
+      padding: clamp(18px, 4vw, 42px);
+    }
+
+    .bloco {
+      margin: 0 0 22px;
+      padding: clamp(18px, 3vw, 28px);
+      border: 1px solid var(--linha);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .bloco h2,
+    .bloco h3,
+    .bloco h4 {
+      margin-top: 0;
+      color: var(--azul-escuro);
+      line-height: 1.22;
+    }
+
+    .bloco h2 { font-size: clamp(1.45rem, 3vw, 2.2rem); }
+    .bloco h3 { font-size: 1.2rem; }
+    .bloco h4 { margin-bottom: 6px; font-size: 1.02rem; }
+
+    .bloco p:last-child,
+    .bloco ul:last-child,
+    .bloco ol:last-child { margin-bottom: 0; }
+
+    .meta {
+      background: linear-gradient(180deg, #f7fbfe, var(--azul-claro));
+      border-color: #bcdcf1;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .meta-item {
+      padding: 15px;
+      border: 1px solid rgba(75, 146, 199, 0.22);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .meta-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--azul-escuro);
+      font-size: 0.77rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .versiculo-chave {
+      margin: 18px 0 0;
+      padding: 17px 19px;
+      border-left: 6px solid var(--laranja);
+      border-radius: 0 12px 12px 0;
+      background: var(--laranja-claro);
+      color: #67351d;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-style: italic;
+    }
+
+    .ponto-partida {
+      border-left: 7px solid var(--amarelo);
+      background: var(--amarelo-claro);
+    }
+
+    .roteiro {
+      border-left: 7px solid var(--roxo);
+      background: var(--roxo-claro);
+    }
+
+    .tempo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tempo-item {
+      padding: 13px 10px;
+      border: 1px solid rgba(107, 70, 193, 0.2);
+      border-radius: 12px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .tempo-item strong {
+      display: block;
+      color: var(--roxo);
+      font-size: 1.1rem;
+    }
+
+    .introducao {
+      background: #fbfdff;
+    }
+
+    .perguntas {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .pergunta {
+      padding: 15px;
+      border: 1px dashed #8ab9d8;
+      border-radius: 13px;
+      background: var(--azul-claro);
+      font-weight: 700;
+    }
+
+    .topico {
+      border-top: 6px solid var(--azul);
+      background: #fff;
+    }
+
+    .topico-numero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-right: 8px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--azul);
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .subtopico {
+      margin-top: 16px;
+      padding: 16px 17px;
+      border-left: 4px solid #9bc7e4;
+      border-radius: 0 12px 12px 0;
+      background: #f8fbfd;
+    }
+
+    .apoio-pedagogico {
+      border-left: 7px solid var(--laranja);
+      background: var(--laranja-claro);
+    }
+
+    .apoio-pedagogico h3 { color: #8b3e12; }
+
+    .aplicacao-pratica {
+      border-left: 7px solid var(--verde);
+      background: var(--verde-claro);
+    }
+
+    .aplicacao-pratica h3 { color: #21633f; }
+
+    .atividade {
+      border-top: 6px solid var(--amarelo);
+      background: var(--amarelo-claro);
+    }
+
+    .passos {
+      counter-reset: passo;
+      list-style: none;
+      padding: 0;
+    }
+
+    .passos li {
+      position: relative;
+      margin: 12px 0;
+      padding: 4px 0 4px 44px;
+    }
+
+    .passos li::before {
+      counter-increment: passo;
+      content: counter(passo);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--laranja);
+      font-weight: 900;
+    }
+
+    .nota-pastoral {
+      border-left: 7px solid #c53030;
+      background: #fff5f5;
+    }
+
+    .nota-pastoral h3 { color: #9b2c2c; }
+
+    .fixacao {
+      border-top: 6px solid var(--roxo);
+    }
+
+    .fixacao ol { padding-left: 22px; }
+
+    details {
+      margin-top: 18px;
+      border: 1px solid #d8caef;
+      border-radius: 12px;
+      background: var(--roxo-claro);
+    }
+
+    summary {
+      padding: 14px 16px;
+      color: var(--roxo);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    details div { padding: 0 18px 18px; }
+
+    .conclusao {
+      border-top: 6px solid var(--verde);
+      background: linear-gradient(180deg, #f8fffa, var(--verde-claro));
+    }
+
+    .sintese {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 13px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+      font-weight: 800;
+    }
+
+    .oracao {
+      border-left: 7px solid var(--roxo);
+      background: var(--roxo-claro);
+    }
+
+    .rodape {
+      padding: 24px;
+      color: #dbefff;
+      background: var(--azul-escuro);
+      text-align: center;
+      font-size: 0.84rem;
+    }
+
+    .rodape strong { color: #fff; }
+
+    @media (max-width: 780px) {
+      .pagina { width: min(100% - 12px, 1120px); margin-top: 6px; }
+      .banner, .licao-viver { border-radius: 12px; }
+      .meta-grid, .perguntas { grid-template-columns: 1fr; }
+      .tempo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .barra-acoes { padding: 0 6px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .pagina { width: 100%; margin: 0; }
+      .barra-acoes { display: none; }
+      .banner, .licao-viver { box-shadow: none; border-radius: 0; }
+      .bloco { break-inside: avoid; }
+      .topico { break-inside: auto; }
+      details > div { display: block !important; }
+      details { break-inside: avoid; }
+      .rodape { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+    <header class="banner"><img src="assets/logo-apoio-pedagogico-adolescentes.png" alt="Adolescentes — Apoio Pedagógico — 15 a 17 anos"></header>
+    <div class="barra-acoes"><button class="botao" type="button" onclick="window.print()">Imprimir / Salvar em PDF</button></div>
+    <article class="licao-viver adolescentes">
+      <header class="titulo-licao"><span class="selo">Viver+ • 3º trimestre de 2026</span><h1>Lição 2: Esaú e Jacó: inveja, rivalidade e ressentimento</h1><p>Material bíblico e pedagógico para auxiliar o professor da Classe Adolescentes, de 15 a 17 anos, na preparação e condução da aula.</p></header>
+      <div class="conteudo">
+        <section class="bloco meta"><h2>📘 Identidade da lição</h2><div class="meta-grid">
+          <div class="meta-item"><strong>Versículo-chave</strong>&quot;E o Senhor lhe disse: Duas nações há no teu ventre, e dois povos se dividirão das tuas entranhas, e um povo será mais forte do que o outro povo, e o maior servirá ao menor&quot;, Gn 25.23.</div>
+          <div class="meta-item"><strong>Objetivo da Lição</strong>Compreender que a inveja, o ressentimento e a rivalidade destroem a harmonia familiar.</div>
+          <div class="meta-item"><strong>Personagem em destaque</strong>Esaú e Jacó, irmãos que precisaram lidar com diferenças, escolhas e reconciliação.</div>
+          <div class="meta-item"><strong>Verdade central</strong>A comparação, o favoritismo e o ressentimento dividem; a graça de Deus conduz ao perdão e à restauração.</div>
+        </div><blockquote class="versiculo-chave">&quot;E o Senhor lhe disse: Duas nações há no teu ventre, e dois povos se dividirão das tuas entranhas, e um povo será mais forte do que o outro povo, e o maior servirá ao menor&quot;, Gn 25.23.</blockquote></section>
+        <section class="bloco ponto-partida"><h2>🚩 Ponto de Partida</h2><p>Apresente a família de Isaque e Rebeca como um lar alcançado pela promessa de Deus, mas que também enfrentou conflitos reais. Os gêmeos já demonstravam diferenças desde o ventre, e a preferência dos pais intensificou a rivalidade.</p><p>Mostre aos adolescentes que ser diferente de um irmão não é problema. O perigo começa quando as diferenças viram competição, comparação constante ou justificativa para manipular e ferir.</p><p><strong>Pergunta de abertura:</strong> Quando a comparação deixa de motivar e começa a destruir um relacionamento?</p></section>
+        <section class="bloco roteiro"><h2>⏱️ Roteiro sugerido para 60 minutos</h2><div class="tempo-grid"><div class="tempo-item"><strong>8 min</strong>Acolhimento e pergunta inicial</div><div class="tempo-item"><strong>10 min</strong>Versículo-chave e introdução</div><div class="tempo-item"><strong>27 min</strong>Desenvolvimento dos tópicos</div><div class="tempo-item"><strong>10 min</strong>Atividade em grupo</div><div class="tempo-item"><strong>5 min</strong>Síntese e oração</div></div></section>
+        <section class="bloco introducao"><h2>💬 Introdução</h2><p>A oração de Isaque foi respondida, mas a chegada dos filhos não eliminou os desafios familiares. Esaú e Jacó cresceram com temperamentos e interesses distintos. O modo como os pais lidaram com essas diferenças favoreceu a divisão do lar.</p><p>A lição permite trabalhar inveja, impulsividade, favoritismo e ressentimento sem transformar os personagens em rótulos simplistas. Ambos fizeram escolhas erradas e ambos precisaram enfrentar consequências.</p><div class="perguntas"><div class="pergunta">Você já se sentiu comparado a alguém da sua família?</div><div class="pergunta">Como o favoritismo afeta irmãos e amigos?</div><div class="pergunta">É possível reconstruir uma relação depois de uma grande decepção?</div></div></section>
+        <section class="bloco topico"><h2><span class="topico-numero">1</span> UMA FAMÍLIA, DOIS POVOS</h2><p>A promessa feita a Abraão avançou por meio de Isaque e Rebeca. A luta dos gêmeos antecipava a formação de dois povos, mas também revelou que aquela família precisaria aprender a conviver com diferenças e expectativas.</p><div class="subtopico"><h4>1.1 A oração abre caminhos</h4><p>Isaque não tratou a esterilidade de Rebeca com indiferença; ele orou. Ensine que dificuldades familiares devem ser levadas a Deus com perseverança, sem culpar ou humilhar quem sofre.</p></div><div class="subtopico"><h4>1.2 Diferenças não diminuem o valor</h4><p>Esaú e Jacó tinham aparência, interesses e temperamentos diferentes. O professor pode afirmar que diversidade de personalidade não torna um filho superior ao outro.</p></div><div class="subtopico"><h4>1.3 Favoritismo alimenta rivalidade</h4><p>Quando Isaque e Rebeca escolheram lados, o lar perdeu equilíbrio. Pais, líderes e professores devem tratar cada adolescente com justiça, sem comparações que produzam vergonha ou competição.</p></div></section>
+<section class="bloco apoio-pedagogico"><h3>🧑‍🏫 Apoio Pedagógico — Tópico 1</h3><p>Desenhe uma árvore familiar simples e peça à turma que identifique pontos em que a comunicação se rompeu. Evite pedir relatos pessoais; use somente a narrativa bíblica.</p><p>Explique que profecia não é autorização para manipulação. A palavra de Deus sobre os filhos não justificava engano, preferência ou violência.</p></section>
+<section class="bloco aplicacao-pratica"><h3>✍️ Aplicação Prática — Tópico 1</h3><p>Proponha que cada aluno escreva duas qualidades próprias e duas qualidades de alguém com quem costuma se comparar. O objetivo é aprender a reconhecer valor sem competir.</p></section><section class="bloco topico"><h2><span class="topico-numero">2</span> GÊMEOS, PORÉM DIFERENTES</h2><p>Os irmãos fizeram escolhas marcadas por impulsividade e astúcia. Esaú desprezou a primogenitura por uma satisfação imediata; Jacó explorou a vulnerabilidade do irmão e depois participou de um engano maior.</p><div class="subtopico"><h4>2.1 Impulso cobra preço</h4><p>Esaú decidiu sob pressão da fome. Adolescentes também podem trocar valores duradouros por aprovação, prazer imediato ou medo de ficar de fora.</p></div><div class="subtopico"><h4>2.2 Esperteza não é sabedoria</h4><p>Jacó conseguiu o que desejava, mas por meios errados. Ensine que alcançar um objetivo não transforma automaticamente o método em algo correto.</p></div><div class="subtopico"><h4>2.3 Escolhas formam caminhos</h4><p>Cada decisão reforça hábitos e produz consequências. Consultar a Deus, ouvir conselhos e esperar são práticas de maturidade espiritual.</p></div></section>
+<section class="bloco apoio-pedagogico"><h3>🧑‍🏫 Apoio Pedagógico — Tópico 2</h3><p>Use o quadro para comparar ‘urgente’ e ‘importante’. Peça exemplos de decisões que parecem urgentes, mas podem ser avaliadas com calma.</p><p>Apresente um filtro simples: isso honra a Deus? é verdadeiro? respeita o próximo? quais serão as consequências amanhã?</p></section>
+<section class="bloco aplicacao-pratica"><h3>✍️ Aplicação Prática — Tópico 2</h3><p>Durante a semana, antes de uma decisão importante, o adolescente deverá fazer uma pausa de cinco minutos, orar e responder ao filtro de quatro perguntas.</p></section><section class="bloco topico"><h2><span class="topico-numero">3</span> AS CONSEQUÊNCIAS DE UMA FAMÍLIA DIVIDIDA</h2><p>A divisão familiar levou Jacó ao exílio e Esaú a anos de ressentimento. O reencontro de Gênesis 33 mostra que o conflito não precisava ser o capítulo final da história.</p><div class="subtopico"><h4>3.1 O pecado atinge toda a casa</h4><p>Favoritismo, engano e ameaças não feriram apenas os irmãos; afetaram pais, esposas, filhos e o futuro da família.</p></div><div class="subtopico"><h4>3.2 Distância não cura automaticamente</h4><p>Vinte anos separados não garantiram paz interior. Perdão exige transformação, verdade e disposição para abandonar a vingança.</p></div><div class="subtopico"><h4>3.3 Reconciliação é possível</h4><p>O abraço entre Esaú e Jacó demonstra que Deus pode abrir caminhos de paz. Reconciliação, porém, não significa ignorar riscos ou retornar a relações abusivas sem proteção.</p></div></section>
+<section class="bloco apoio-pedagogico"><h3>🧑‍🏫 Apoio Pedagógico — Tópico 3</h3><p>Construa com a turma uma ‘ponte da reconciliação’ com quatro passos: reconhecer, pedir perdão, reparar e estabelecer novos limites.</p><p>Diferencie perdão de confiança automática. A confiança pode precisar ser reconstruída com tempo e atitudes consistentes.</p></section>
+<section class="bloco aplicacao-pratica"><h3>✍️ Aplicação Prática — Tópico 3</h3><p>Cada aluno escolherá uma ação segura de paz: pedir desculpas, parar uma provocação, conversar com respeito ou buscar ajuda de um adulto maduro.</p></section>
+        <section class="bloco atividade"><h2>🎯 Atividade em grupo — “Relacionamento familiar: qual é o seu papel?”</h2><p><strong>Objetivo:</strong> identificar comportamentos que aumentam ou reduzem conflitos no lar.</p><ol class="passos"><li>Divida a turma em pequenos grupos e entregue uma situação fictícia de conflito familiar.</li><li>Cada grupo prepara uma esquete curta mostrando primeiro a reação que piora o problema.</li><li>Na segunda apresentação, o grupo refaz a cena usando diálogo, respeito, verdade e limites.</li><li>Após as apresentações, a turma aponta quais atitudes mudaram o resultado.</li><li>Finalize com uma oração pelas famílias representadas na classe, sem expor casos particulares.</li></ol><p><strong>Material:</strong> papéis com situações fictícias, canetas e espaço para apresentação. <strong>Tempo estimado:</strong> 12 a 15 minutos.</p></section>
+        <section class="bloco nota-pastoral"><h3>🛡️ Nota pastoral e de proteção</h3><p>Não pressione adolescentes a revelar conflitos domésticos. Trabalhe com exemplos fictícios e ofereça conversa reservada a quem procurar ajuda.</p><p>Em situações de violência ou ameaça, reconciliação não significa permanecer em risco. A prioridade é proteção e encaminhamento responsável.</p></section>
+        <section class="bloco fixacao"><h2>🧠 Perguntas para interação e fixação</h2><ol><li>O que o favoritismo produziu na família de Isaque?</li><li>Qual foi o erro de Esaú ao vender a primogenitura?</li><li>Por que a atitude de Jacó não pode ser chamada de sabedoria?</li><li>Como a comparação alimenta a inveja?</li><li>Que consequências atingiram a família dividida?</li><li>O que o reencontro dos irmãos ensina?</li><li>Qual a diferença entre perdão e confiança imediata?</li><li>Que atitude de paz você pode praticar?</li></ol><details><summary>Orientações de resposta para o professor</summary><div><p><strong>1.</strong> Rivalidade, ressentimento e divisão. <strong>2.</strong> Trocou algo valioso por satisfação imediata. <strong>3.</strong> Porque usou manipulação e engano. <strong>4.</strong> Faz a pessoa medir seu valor pelo que o outro possui. <strong>5.</strong> Exílio, medo, afastamento e sofrimento familiar. <strong>6.</strong> Que Deus pode conduzir à reconciliação. <strong>7.</strong> Perdoar abandona a vingança; confiança pode ser reconstruída gradualmente. <strong>8.</strong> Resposta pessoal e segura.</p></div></details></section>
+        <section class="bloco conclusao"><h2>✅ Conclusão</h2><p>Esaú e Jacó mostram que famílias alcançadas pelas promessas de Deus ainda precisam lidar com escolhas humanas. A graça não elimina a responsabilidade; ela chama ao arrependimento e à transformação.</p><p>O adolescente deve aprender a valorizar sua identidade, rejeitar comparações destrutivas e buscar caminhos de paz. Onde houver feridas profundas, deve procurar ajuda madura e segura.</p><div class="sintese">SÍNTESE DA LIÇÃO: Inveja, favoritismo e impulsividade dividem a família; verdade, arrependimento e perdão abrem caminhos de reconciliação.</div></section>
+        <section class="bloco oracao"><h2>🙏 Oração final sugerida</h2><p>Senhor, livra-nos da inveja, da comparação e do ressentimento. Dá-nos sabedoria para escolher o que é correto, coragem para pedir perdão e graça para construir paz em nossa família. Em nome de Jesus, amém.</p></section>
+      </div>
+      <footer class="rodape"><strong>EBD Fiel — Apoio Pedagógico Adolescentes</strong><br>Material autoral de apoio à preparação da aula • Classe de 15 a 17 anos • 3º trimestre de 2026</footer>
+    </article>
+  </main>
+</body>
+</html>
