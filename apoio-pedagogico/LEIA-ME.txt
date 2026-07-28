@@ -1,0 +1,10 @@
+APOIOS PEDAGÓGICOS — CLASSE ADOLESCENTES — 3º TRIMESTRE DE 2026
+
+Conteúdo:
+- index.html: página inicial com links para as 13 lições.
+- apoio-pedagogico-adolescentes-licao-01.html até licao-13.html.
+- assets/logo-apoio-pedagogico-adolescentes.png.
+
+A Lição 1 é a versão previamente aprovada. As Lições 2 a 13 seguem o mesmo padrão visual e pedagógico. Em todas as páginas, o campo principal usa o rótulo VERSÍCULO-CHAVE e reproduz o versículo conforme o material original.
+
+Para visualizar localmente, abra index.html.

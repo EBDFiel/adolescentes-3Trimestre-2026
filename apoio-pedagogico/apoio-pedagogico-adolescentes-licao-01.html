@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4b92c7">
+  <meta name="description" content="Apoio pedagógico da Lição 1 da Classe Adolescentes: Obediência, um princípio gerador de bênçãos.">
+  <title>Lição 1 — Obediência, um princípio gerador de bênçãos | Apoio Pedagógico Adolescentes</title>
+  <style>
+    :root {
+      --azul: #4b92c7;
+      --azul-escuro: #1e527b;
+      --azul-claro: #eaf5fc;
+      --laranja: #ff6f1f;
+      --laranja-claro: #fff1e8;
+      --verde: #2f855a;
+      --verde-claro: #edf9f1;
+      --amarelo: #f4b740;
+      --amarelo-claro: #fff9e6;
+      --roxo: #6b46c1;
+      --roxo-claro: #f5f0ff;
+      --texto: #24313d;
+      --muted: #5e6e7c;
+      --linha: #d8e3ec;
+      --papel: #ffffff;
+      --fundo: #eef5fa;
+      --sombra: 0 14px 38px rgba(27, 72, 106, 0.13);
+      --raio: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(75, 146, 199, 0.18), transparent 34rem),
+        linear-gradient(180deg, #f8fbfd 0%, var(--fundo) 100%);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; }
+
+    .pagina {
+      width: min(1120px, calc(100% - 24px));
+      margin: 24px auto 56px;
+    }
+
+    .banner {
+      overflow: hidden;
+      border-radius: var(--raio);
+      background: var(--azul);
+      box-shadow: var(--sombra);
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .barra-acoes {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .botao {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 17px;
+      color: #fff;
+      background: var(--azul-escuro);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .botao:hover,
+    .botao:focus-visible {
+      background: var(--laranja);
+      outline: 3px solid rgba(255, 111, 31, 0.25);
+    }
+
+    .licao-viver {
+      overflow: hidden;
+      border: 1px solid rgba(75, 146, 199, 0.2);
+      border-radius: var(--raio);
+      background: var(--papel);
+      box-shadow: var(--sombra);
+    }
+
+    .titulo-licao {
+      padding: clamp(24px, 5vw, 46px);
+      color: #fff;
+      background:
+        linear-gradient(125deg, rgba(30, 82, 123, 0.98), rgba(75, 146, 199, 0.94)),
+        var(--azul);
+    }
+
+    .titulo-licao .selo {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .titulo-licao h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(2rem, 5.3vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .titulo-licao p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.05rem;
+    }
+
+    .conteudo {
+      padding: clamp(18px, 4vw, 42px);
+    }
+
+    .bloco {
+      margin: 0 0 22px;
+      padding: clamp(18px, 3vw, 28px);
+      border: 1px solid var(--linha);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .bloco h2,
+    .bloco h3,
+    .bloco h4 {
+      margin-top: 0;
+      color: var(--azul-escuro);
+      line-height: 1.22;
+    }
+
+    .bloco h2 { font-size: clamp(1.45rem, 3vw, 2.2rem); }
+    .bloco h3 { font-size: 1.2rem; }
+    .bloco h4 { margin-bottom: 6px; font-size: 1.02rem; }
+
+    .bloco p:last-child,
+    .bloco ul:last-child,
+    .bloco ol:last-child { margin-bottom: 0; }
+
+    .meta {
+      background: linear-gradient(180deg, #f7fbfe, var(--azul-claro));
+      border-color: #bcdcf1;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .meta-item {
+      padding: 15px;
+      border: 1px solid rgba(75, 146, 199, 0.22);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .meta-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--azul-escuro);
+      font-size: 0.77rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .versiculo-chave {
+      margin: 18px 0 0;
+      padding: 17px 19px;
+      border-left: 6px solid var(--laranja);
+      border-radius: 0 12px 12px 0;
+      background: var(--laranja-claro);
+      color: #67351d;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-style: italic;
+    }
+
+    .ponto-partida {
+      border-left: 7px solid var(--amarelo);
+      background: var(--amarelo-claro);
+    }
+
+    .roteiro {
+      border-left: 7px solid var(--roxo);
+      background: var(--roxo-claro);
+    }
+
+    .tempo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tempo-item {
+      padding: 13px 10px;
+      border: 1px solid rgba(107, 70, 193, 0.2);
+      border-radius: 12px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .tempo-item strong {
+      display: block;
+      color: var(--roxo);
+      font-size: 1.1rem;
+    }
+
+    .introducao {
+      background: #fbfdff;
+    }
+
+    .perguntas {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .pergunta {
+      padding: 15px;
+      border: 1px dashed #8ab9d8;
+      border-radius: 13px;
+      background: var(--azul-claro);
+      font-weight: 700;
+    }
+
+    .topico {
+      border-top: 6px solid var(--azul);
+      background: #fff;
+    }
+
+    .topico-numero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-right: 8px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--azul);
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .subtopico {
+      margin-top: 16px;
+      padding: 16px 17px;
+      border-left: 4px solid #9bc7e4;
+      border-radius: 0 12px 12px 0;
+      background: #f8fbfd;
+    }
+
+    .apoio-pedagogico {
+      border-left: 7px solid var(--laranja);
+      background: var(--laranja-claro);
+    }
+
+    .apoio-pedagogico h3 { color: #8b3e12; }
+
+    .aplicacao-pratica {
+      border-left: 7px solid var(--verde);
+      background: var(--verde-claro);
+    }
+
+    .aplicacao-pratica h3 { color: #21633f; }
+
+    .atividade {
+      border-top: 6px solid var(--amarelo);
+      background: var(--amarelo-claro);
+    }
+
+    .passos {
+      counter-reset: passo;
+      list-style: none;
+      padding: 0;
+    }
+
+    .passos li {
+      position: relative;
+      margin: 12px 0;
+      padding: 4px 0 4px 44px;
+    }
+
+    .passos li::before {
+      counter-increment: passo;
+      content: counter(passo);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--laranja);
+      font-weight: 900;
+    }
+
+    .nota-pastoral {
+      border-left: 7px solid #c53030;
+      background: #fff5f5;
+    }
+
+    .nota-pastoral h3 { color: #9b2c2c; }
+
+    .fixacao {
+      border-top: 6px solid var(--roxo);
+    }
+
+    .fixacao ol { padding-left: 22px; }
+
+    details {
+      margin-top: 18px;
+      border: 1px solid #d8caef;
+      border-radius: 12px;
+      background: var(--roxo-claro);
+    }
+
+    summary {
+      padding: 14px 16px;
+      color: var(--roxo);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    details div { padding: 0 18px 18px; }
+
+    .conclusao {
+      border-top: 6px solid var(--verde);
+      background: linear-gradient(180deg, #f8fffa, var(--verde-claro));
+    }
+
+    .sintese {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 13px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+      font-weight: 800;
+    }
+
+    .oracao {
+      border-left: 7px solid var(--roxo);
+      background: var(--roxo-claro);
+    }
+
+    .rodape {
+      padding: 24px;
+      color: #dbefff;
+      background: var(--azul-escuro);
+      text-align: center;
+      font-size: 0.84rem;
+    }
+
+    .rodape strong { color: #fff; }
+
+    @media (max-width: 780px) {
+      .pagina { width: min(100% - 12px, 1120px); margin-top: 6px; }
+      .banner, .licao-viver { border-radius: 12px; }
+      .meta-grid, .perguntas { grid-template-columns: 1fr; }
+      .tempo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .barra-acoes { padding: 0 6px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .pagina { width: 100%; margin: 0; }
+      .barra-acoes { display: none; }
+      .banner, .licao-viver { box-shadow: none; border-radius: 0; }
+      .bloco { break-inside: avoid; }
+      .topico { break-inside: auto; }
+      details > div { display: block !important; }
+      details { break-inside: avoid; }
+      .rodape { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+    <header class="banner">
+      <img src="assets/logo-apoio-pedagogico-adolescentes.png" alt="Adolescentes — Apoio Pedagógico — 15 a 17 anos">
+    </header>
+
+    <div class="barra-acoes">
+      <button class="botao" type="button" onclick="window.print()">Imprimir / Salvar em PDF</button>
+    </div>
+
+    <article class="licao-viver adolescentes">
+      <header class="titulo-licao">
+        <span class="selo">Viver+ • 3º trimestre de 2026</span>
+        <h1>Lição 1: Obediência, um princípio gerador de bênçãos</h1>
+        <p>Material bíblico e pedagógico para auxiliar o professor da Classe Adolescentes, de 15 a 17 anos, na preparação e condução da aula.</p>
+      </header>
+
+      <div class="conteudo">
+        <section class="bloco meta">
+          <h2>📘 Identidade da lição</h2>
+          <div class="meta-grid">
+            <div class="meta-item">
+              <strong>Versículo-chave</strong>
+              “Honra a teu pai e a tua mãe, que é o primeiro mandamento com promessa,” Ef 6.2.
+            </div>
+            <div class="meta-item">
+              <strong>Objetivo da Lição</strong>
+              Compreender que a obediência aos pais é a base para uma vida longa e abençoada.
+            </div>
+            <div class="meta-item">
+              <strong>Personagem em destaque</strong>
+              Isaque, exemplo de fé, confiança e disposição para obedecer.
+            </div>
+            <div class="meta-item">
+              <strong>Verdade central</strong>
+              Honrar os pais é reconhecer uma autoridade estabelecida por Deus e responder a ela com respeito, diálogo e responsabilidade.
+            </div>
+          </div>
+          <blockquote class="versiculo-chave">"Honra a teu pai e a tua mãe, que é o primeiro mandamento com promessa," Ef 6.2.</blockquote>
+        </section>
+
+        <section class="bloco ponto-partida">
+          <h2>🚩 Ponto de Partida</h2>
+          <p>Inicie apresentando Isaque como um adolescente inserido em uma história de promessa. Em Gênesis 22, ele caminha com Abraão, percebe que falta o cordeiro e faz uma pergunta legítima. O texto mostra que fé e obediência não anulam o pensamento: Isaque pergunta, ouve e continua caminhando.</p>
+          <p>Conduza a turma a perceber que a obediência bíblica não é uma atitude automática ou sem entendimento. Ela nasce de confiança, relacionamento e reconhecimento de autoridade. Essa perspectiva permite conversar sobre a realidade dos adolescentes, que estão desenvolvendo autonomia, opiniões próprias e capacidade de decisão.</p>
+          <p><strong>Pergunta de abertura:</strong> O que torna mais fácil obedecer a alguém: medo, confiança ou compreensão? Por quê?</p>
+        </section>
+
+        <section class="bloco roteiro">
+          <h2>⏱️ Roteiro sugerido para 60 minutos</h2>
+          <div class="tempo-grid">
+            <div class="tempo-item"><strong>8 min</strong>Acolhimento e pergunta inicial</div>
+            <div class="tempo-item"><strong>10 min</strong>Versículo-chave e introdução</div>
+            <div class="tempo-item"><strong>27 min</strong>Desenvolvimento dos tópicos</div>
+            <div class="tempo-item"><strong>10 min</strong>Atividade em grupo</div>
+            <div class="tempo-item"><strong>5 min</strong>Síntese e oração</div>
+          </div>
+        </section>
+
+        <section class="bloco introducao">
+          <h2>💬 Introdução</h2>
+          <p>A trajetória de Abraão é marcada pelo chamado, pela renovação das promessas e pela provação da fé. Isaque não aparece apenas como o filho prometido; ele também participa da caminhada de fé de sua família. A forma como pai e filho seguem juntos para Moriá oferece uma oportunidade para discutir confiança, diálogo, obediência e responsabilidade.</p>
+          <p>Na adolescência, obedecer pode ser interpretado como perda de liberdade. A aula deve mostrar o contrário: limites saudáveis podem proteger a vida, formar caráter e preparar o adolescente para decisões maduras. Ao mesmo tempo, pais e responsáveis precisam exercer autoridade com amor, coerência e escuta.</p>
+          <div class="perguntas">
+            <div class="pergunta">Qual é a diferença entre obedecer e simplesmente ter medo?</div>
+            <div class="pergunta">É possível discordar dos pais sem ser desrespeitoso?</div>
+            <div class="pergunta">Que tipo de conselho costuma evitar decisões precipitadas?</div>
+          </div>
+        </section>
+
+        <section class="bloco topico">
+          <h2><span class="topico-numero">1</span> A OBEDIÊNCIA É UMA PROVA DE FÉ</h2>
+          <p>Isaque nasceu em cumprimento de uma promessa que parecia impossível. Sua própria existência testemunhava que Deus é fiel. Em Gênesis 22, a fé da família é provada em uma situação difícil, e o jovem Isaque participa dessa experiência com confiança.</p>
+
+          <div class="subtopico">
+            <h4>1.1 Fé que aparece nas atitudes</h4>
+            <p>A fé não se resume ao que alguém afirma acreditar. Ela se torna visível quando influencia decisões, reações e relacionamentos. Isaque caminha com o pai, carrega a lenha e pergunta sobre o sacrifício. Sua postura mostra que confiança e diálogo podem coexistir.</p>
+          </div>
+
+          <div class="subtopico">
+            <h4>1.2 Obediência construída em relacionamento</h4>
+            <p>A harmonia entre Abraão e Isaque não surgiu no momento da prova. Ela foi construída ao longo da convivência. Pais que orientam com presença e adolescentes que aprendem a ouvir desenvolvem um ambiente no qual a obediência deixa de ser apenas imposição e se torna resposta de confiança.</p>
+          </div>
+
+          <div class="subtopico">
+            <h4>1.3 Perguntar não é o mesmo que se rebelar</h4>
+            <p>Isaque pergunta: “Onde está o cordeiro?”. O professor pode destacar que uma pergunta respeitosa não constitui rebeldia. Adolescentes precisam aprender a expressar dúvidas, sentimentos e discordâncias de maneira honrosa, sem agressividade, manipulação ou desprezo.</p>
+          </div>
+        </section>
+
+        <section class="bloco apoio-pedagogico">
+          <h3>🧑‍🏫 Apoio Pedagógico — Tópico 1</h3>
+          <p>Desenhe no quadro três palavras: <strong>medo, confiança e fé</strong>. Peça aos alunos que expliquem como cada uma pode influenciar a obediência. Mostre que o medo pode produzir comportamento momentâneo, enquanto a confiança favorece diálogo e responsabilidade.</p>
+          <p>Evite apresentar Isaque como alguém sem vontade ou sem percepção. O próprio texto registra sua pergunta. Enfatize que a fé bíblica não elimina a consciência, mas orienta a pessoa a confiar em Deus mesmo quando ainda não compreende tudo.</p>
+        </section>
+
+        <section class="bloco aplicacao-pratica">
+          <h3>✍️ Aplicação Prática — Tópico 1</h3>
+          <p>Convide cada adolescente a identificar uma orientação recebida em casa que inicialmente pareceu desagradável, mas tinha intenção de proteção. Peça que reflitam sobre como poderiam conversar a respeito sem gritar, ironizar, esconder informações ou agir impulsivamente.</p>
+          <p><strong>Desafio da semana:</strong> antes de responder a uma orientação, fazer uma pausa, ouvir até o fim e formular uma pergunta respeitosa para compreender o motivo.</p>
+        </section>
+
+        <section class="bloco topico">
+          <h2><span class="topico-numero">2</span> O CASAMENTO DE ISAQUE</h2>
+          <p>Gênesis 24 apresenta uma decisão familiar importante. Dentro dos costumes daquela época, Abraão participou da busca por uma esposa para Isaque. O contexto histórico não deve ser transportado mecanicamente para os dias atuais; o princípio pedagógico é que decisões afetivas exigem oração, caráter, tempo e conselhos maduros.</p>
+
+          <div class="subtopico">
+            <h4>2.1 Escolhas afetivas não devem ser impulsivas</h4>
+            <p>A adolescência é marcada por emoções intensas e desejo de pertencimento. Por isso, o professor deve tratar o tema com seriedade e respeito, sem ridicularizar sentimentos. A atração pode ser real, mas não é suficiente para sustentar um relacionamento saudável.</p>
+          </div>
+
+          <div class="subtopico">
+            <h4>2.2 Conselhos ajudam a perceber o que a emoção não vê</h4>
+            <p>Pais, responsáveis e líderes maduros podem identificar sinais de risco que passam despercebidos quando alguém está emocionalmente envolvido. Ouvir conselhos não significa transferir toda decisão para outra pessoa; significa reconhecer que a maturidade também se constrói pela escuta.</p>
+          </div>
+
+          <div class="subtopico">
+            <h4>2.3 O caráter deve ter prioridade sobre a aparência</h4>
+            <p>Uma escolha alinhada à vontade de Deus considera fé, respeito, verdade, responsabilidade e propósito. O adolescente precisa aprender que beleza, popularidade e aprovação nas redes sociais não substituem caráter.</p>
+          </div>
+        </section>
+
+        <section class="bloco apoio-pedagogico">
+          <h3>🧑‍🏫 Apoio Pedagógico — Tópico 2</h3>
+          <p>Apresente um estudo de caso: “Um adolescente começou um relacionamento escondido porque sabe que a família faria perguntas. A pessoa demonstra ciúme excessivo, exige senhas e tenta afastá-lo dos amigos.” Pergunte à turma quais sinais precisam ser observados e quem poderia ajudar.</p>
+          <p>Organize as respostas em quatro critérios no quadro: <strong>fé, caráter, limites e conselho</strong>. Conduza a conversa sem expor histórias pessoais da turma e sem pressionar ninguém a revelar relacionamentos.</p>
+        </section>
+
+        <section class="bloco aplicacao-pratica">
+          <h3>✍️ Aplicação Prática — Tópico 2</h3>
+          <p>Ensine os adolescentes a fazer quatro perguntas antes de decisões afetivas importantes:</p>
+          <ol>
+            <li>Essa relação me aproxima ou me afasta de Deus?</li>
+            <li>Há respeito, verdade e limites saudáveis?</li>
+            <li>Estou agindo com pressa, medo de ficar sozinho ou necessidade de aprovação?</li>
+            <li>O que pessoas maduras e confiáveis percebem nessa situação?</li>
+          </ol>
+        </section>
+
+        <section class="bloco topico">
+          <h2><span class="topico-numero">3</span> O BENEFÍCIO DA OBEDIÊNCIA</h2>
+          <p>Êxodo 20.12 e Efésios 6.1-3 ligam honra, obediência e promessa. A Bíblia não apresenta a família como perfeita, mas ensina que o respeito às autoridades familiares faz parte da formação espiritual e moral dos filhos.</p>
+
+          <div class="subtopico">
+            <h4>3.1 Honrar é tratar com valor</h4>
+            <p>Honrar inclui falar com respeito, reconhecer esforços, demonstrar gratidão e evitar atitudes que humilham ou desprezam. Um adolescente pode discordar de uma decisão e ainda assim manter honra na forma de conversar.</p>
+          </div>
+
+          <div class="subtopico">
+            <h4>3.2 A disciplina pode exercer uma função protetora</h4>
+            <p>Limites relacionados a horários, amizades, internet, estudos e responsabilidades domésticas podem parecer incômodos, mas muitas vezes têm finalidade educativa e protetora. O desafio é aprender a distinguir cuidado de controle abusivo e correção de violência.</p>
+          </div>
+
+          <div class="subtopico">
+            <h4>3.3 A promessa não é uma fórmula automática</h4>
+            <p>A “vida longa” associada ao mandamento comunica um princípio de bem-estar no caminho da sabedoria. Não significa que toda dificuldade seja resultado direto de desobediência, nem que pessoas obedientes nunca enfrentarão sofrimento. A promessa deve ser ensinada com equilíbrio, sem culpa indevida.</p>
+          </div>
+        </section>
+
+        <section class="bloco apoio-pedagogico">
+          <h3>🧑‍🏫 Apoio Pedagógico — Tópico 3</h3>
+          <p>Crie duas colunas no quadro: <strong>honra</strong> e <strong>desonra</strong>. Solicite exemplos concretos de atitudes em casa. Ajude a turma a transformar respostas genéricas em comportamentos observáveis: tom de voz, cumprimento de combinados, participação nas tarefas, sinceridade e uso responsável do celular.</p>
+          <p>Explique a expressão “no Senhor” em Efésios 6.1. A autoridade dos pais deve ser respeitada, mas nenhuma autoridade humana tem direito de exigir pecado, encobrir violência ou impedir a busca por proteção.</p>
+        </section>
+
+        <section class="bloco aplicacao-pratica">
+          <h3>✍️ Aplicação Prática — Tópico 3</h3>
+          <p>Proponha o <strong>Desafio dos Sete Dias de Honra</strong>. Cada adolescente escolherá uma atitude diária: agradecer, cumprir uma tarefa sem ser lembrado, pedir desculpas, conversar sem celular na mão, responder com respeito, orar pela família ou demonstrar carinho.</p>
+          <p>Deixe claro que o desafio não serve para “comprar” a aprovação dos pais, mas para exercitar uma postura cristã no cotidiano.</p>
+        </section>
+
+        <section class="bloco atividade">
+          <h2>🎯 Atividade em grupo — “Por que obedecer?”</h2>
+          <p><strong>Objetivo:</strong> permitir que a turma diferencie obediência por medo, obediência por conveniência e obediência baseada em honra e confiança.</p>
+          <ol class="passos">
+            <li>Entregue uma folha a cada aluno e peça uma resposta anônima para a pergunta: “Por que um adolescente deve obedecer aos pais ou responsáveis?”</li>
+            <li>Recolha as folhas, misture-as e leia algumas respostas sem identificar os autores.</li>
+            <li>Agrupe as respostas no quadro: medo de punição, respeito, proteção, confiança, mandamento bíblico, convivência e responsabilidade.</li>
+            <li>Leia Êxodo 20.12 e Efésios 6.1-3. Pergunte o que os textos acrescentam à discussão.</li>
+            <li>Finalize pedindo que cada aluno escreva uma atitude concreta de honra que pretende praticar durante a semana.</li>
+          </ol>
+          <p><strong>Material:</strong> folhas pequenas, canetas e quadro. <strong>Tempo estimado:</strong> 10 minutos.</p>
+        </section>
+
+        <section class="bloco nota-pastoral">
+          <h3>🛡️ Nota pastoral e de proteção</h3>
+          <p>Ao ensinar obediência, não diga que o adolescente precisa aceitar abuso, violência, assédio, ameaça, negligência grave ou ordem para praticar algo errado. “Obedecer no Senhor” não legitima pecado nem silenciamento.</p>
+          <p>Se um aluno relatar situação de risco, acolha sem interrogatório público, não prometa segredo absoluto e siga os procedimentos de proteção da igreja e a legislação aplicável, envolvendo responsáveis seguros e autoridades competentes quando necessário.</p>
+        </section>
+
+        <section class="bloco fixacao">
+          <h2>🧠 Perguntas para interação e fixação</h2>
+          <ol>
+            <li>Quais duas características se destacam na experiência de Isaque em Gênesis 22?</li>
+            <li>Por que uma pergunta respeitosa não deve ser confundida com rebeldia?</li>
+            <li>Como a confiança influencia a obediência?</li>
+            <li>Por que decisões afetivas não devem ser tomadas apenas pela emoção?</li>
+            <li>Que sinais revelam caráter em um relacionamento?</li>
+            <li>O que significa honrar pai e mãe na prática?</li>
+            <li>Como um adolescente pode discordar sem desonrar?</li>
+            <li>Qual atitude de honra você pode praticar nesta semana?</li>
+          </ol>
+          <details>
+            <summary>Orientações de resposta para o professor</summary>
+            <div>
+              <p><strong>1.</strong> Fé e obediência. <strong>2.</strong> Porque diálogo e dúvida podem ser expressos com respeito. <strong>3.</strong> A confiança permite ouvir, perguntar e responder com responsabilidade. <strong>4.</strong> Porque emoções intensas podem ocultar riscos e consequências. <strong>5.</strong> Verdade, respeito, limites, responsabilidade e coerência com a fé. <strong>6.</strong> Tratar com valor, gratidão, respeito e responsabilidade. <strong>7.</strong> Controlando o tom de voz, ouvindo e apresentando razões sem agressão. <strong>8.</strong> Resposta pessoal e concreta.</p>
+            </div>
+          </details>
+        </section>
+
+        <section class="bloco conclusao">
+          <h2>✅ Conclusão</h2>
+          <p>A obediência bíblica não pretende impedir o amadurecimento do adolescente. Pelo contrário, ajuda a formar pessoas capazes de ouvir, avaliar, dialogar e agir com responsabilidade. Isaque mostra que fé e confiança podem orientar a caminhada mesmo em situações difíceis.</p>
+          <p>O professor deve conduzir a turma a uma compreensão equilibrada: filhos são chamados a honrar e obedecer no Senhor; pais e responsáveis são chamados a orientar com amor, coerência e cuidado. Onde há diálogo, respeito e temor de Deus, a família encontra melhores condições para enfrentar conflitos e crescer.</p>
+          <div class="sintese">SÍNTESE DA LIÇÃO: Honrar e obedecer aos pais, no Senhor, é uma expressão de fé que protege relacionamentos, forma caráter e prepara o adolescente para escolhas responsáveis.</div>
+        </section>
+
+        <section class="bloco oracao">
+          <h2>🙏 Oração final sugerida</h2>
+          <p>Senhor, dá-nos sabedoria para ouvir, humildade para reconhecer nossos erros e coragem para conversar com respeito. Abençoa nossas famílias, cura relacionamentos feridos e ajuda pais e filhos a viverem em amor, verdade e responsabilidade. Ensina-nos a honrar as autoridades sem nos afastarmos da tua Palavra. Em nome de Jesus, amém.</p>
+        </section>
+      </div>
+
+      <footer class="rodape">
+        <strong>EBD Fiel — Apoio Pedagógico Adolescentes</strong><br>
+        Material autoral de apoio à preparação da aula • Classe de 15 a 17 anos • 3º trimestre de 2026
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
