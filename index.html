@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html lang="pt-BR">
@@ -519,7 +520,283 @@
             }
         }
 
-    </style>
+    
+
+        /* ============================================================
+           AÇÕES INDIVIDUAIS DAS LIÇÕES — EBD FIEL
+           ============================================================ */
+        .acoes-licao-adolescentes {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 12px 0 18px;
+            padding: 13px 14px;
+            border: 1px solid #d9cdbd;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #ffffff, #f7f8fa);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .acoes-licao-adolescentes .rotulo-acoes {
+            margin-right: auto;
+            color: #68707a;
+            font-size: 0.76rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .acao-licao-adolescentes {
+            appearance: none;
+            min-height: 43px;
+            padding: 9px 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 1px solid transparent;
+            border-radius: 999px;
+            font: 900 0.84rem/1.2 Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+        }
+
+        .acao-licao-adolescentes:hover { transform: translateY(-1px); }
+        .acao-licao-adolescentes:focus-visible {
+            outline: 3px solid rgba(184, 134, 11, 0.30);
+            outline-offset: 3px;
+        }
+
+        .acao-licao-adolescentes.copiar {
+            color: #0b7139;
+            background: #eaf7f0;
+            border-color: #b8dcc8;
+        }
+
+        .acao-licao-adolescentes.copiar:hover {
+            box-shadow: 0 7px 17px rgba(11, 113, 57, 0.16);
+        }
+
+        .acao-licao-adolescentes.imprimir {
+            color: #fff;
+            background: #681218;
+            border-color: #681218;
+        }
+
+        .acao-licao-adolescentes.imprimir:hover {
+            background: #3d0a0e;
+            box-shadow: 0 7px 18px rgba(16, 20, 41, 0.22);
+        }
+
+        .acao-licao-adolescentes svg {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 auto;
+        }
+
+        .aviso-copia-adolescentes {
+            position: fixed;
+            left: 50%;
+            bottom: 24px;
+            z-index: 2000;
+            transform: translate(-50%, 18px);
+            opacity: 0;
+            pointer-events: none;
+            max-width: min(92vw, 540px);
+            padding: 12px 18px;
+            border-radius: 999px;
+            color: #fff;
+            background: #3d0a0e;
+            font: 800 0.88rem/1.3 Arial, Helvetica, sans-serif;
+            text-align: center;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .aviso-copia-adolescentes.visivel {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        @media (max-width: 650px) {
+            .acoes-licao-adolescentes { align-items: stretch; }
+            .acoes-licao-adolescentes .rotulo-acoes {
+                width: 100%;
+                margin: 0 0 2px;
+            }
+            .acao-licao-adolescentes {
+                flex: 1 1 100%;
+                width: 100%;
+                border-radius: 8px;
+                padding: 11px 13px;
+            }
+        }
+
+        @media print {
+            @page { size: A4 portrait; margin: 9mm; }
+
+            html,
+            body {
+                background: #fff !important;
+                color: #25262a !important;
+                font-size: 9.3pt !important;
+                line-height: 1.38 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body.imprimir-licao-unica-adolescentes {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .site-header,
+            body.imprimir-licao-unica-adolescentes .floating-summary,
+            body.imprimir-licao-unica-adolescentes footer {
+                display: none !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .container {
+                display: block !important;
+                width: auto !important;
+                max-width: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: 0 !important;
+                background: #fff !important;
+                box-shadow: none !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .container > * {
+                display: none !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .container > .lesson.alvo-impressao-adolescentes {
+                display: block !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson.alvo-impressao-adolescentes {
+                width: auto !important;
+                max-width: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: 0 !important;
+                background: #fff !important;
+                box-shadow: none !important;
+                break-before: auto !important;
+                page-break-before: auto !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .acoes-licao-adolescentes,
+            body.imprimir-licao-unica-adolescentes .linha-apoio-adolescentes,
+            body.imprimir-licao-unica-adolescentes .lesson-toolbar,
+            body.imprimir-licao-unica-adolescentes .lesson-navigation,
+            body.imprimir-licao-unica-adolescentes .aviso-copia-adolescentes {
+                display: none !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson-cover {
+                display: block !important;
+                margin: 0 0 4mm !important;
+                break-after: auto !important;
+                page-break-after: auto !important;
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson-cover img {
+                display: block !important;
+                width: 100% !important;
+                height: auto !important;
+                max-height: 92mm !important;
+                object-fit: contain !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson h2 {
+                margin: 0 0 3mm !important;
+                padding: 2.5mm 3mm !important;
+                font-size: 16pt !important;
+                line-height: 1.14 !important;
+                break-after: avoid-page !important;
+                page-break-after: avoid !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson h3 {
+                margin: 4mm 0 1.5mm !important;
+                font-size: 13pt !important;
+                line-height: 1.18 !important;
+                break-after: avoid-page !important;
+                page-break-after: avoid !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson h4 {
+                margin: 3mm 0 1mm !important;
+                font-size: 10.8pt !important;
+                line-height: 1.2 !important;
+                break-after: avoid-page !important;
+                page-break-after: avoid !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson p,
+            body.imprimir-licao-unica-adolescentes .lesson li {
+                orphans: 3;
+                widows: 3;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson p {
+                margin: 0 0 1.8mm !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .versiculo,
+            body.imprimir-licao-unica-adolescentes .objetivo,
+            body.imprimir-licao-unica-adolescentes .ponto-partida,
+            body.imprimir-licao-unica-adolescentes .introducao,
+            body.imprimir-licao-unica-adolescentes .conclusao,
+            body.imprimir-licao-unica-adolescentes .complemento,
+            body.imprimir-licao-unica-adolescentes .atividade,
+            body.imprimir-licao-unica-adolescentes .respostas,
+            body.imprimir-licao-unica-adolescentes .comecando-aula,
+            body.imprimir-licao-unica-adolescentes .mensagem-valiosa,
+            body.imprimir-licao-unica-adolescentes .verdade-aplicada,
+            body.imprimir-licao-unica-adolescentes .concluindo,
+            body.imprimir-licao-unica-adolescentes .embasamento,
+            body.imprimir-licao-unica-adolescentes .dica-professor {
+                margin: 2.2mm 0 !important;
+                padding: 2.5mm 3mm !important;
+                border-radius: 1.5mm !important;
+                font-size: 8.9pt !important;
+                line-height: 1.34 !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .lesson-highlights {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 3mm !important;
+                margin: 2.5mm 0 !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .objetivo,
+            body.imprimir-licao-unica-adolescentes .versiculo,
+            body.imprimir-licao-unica-adolescentes .mensagem-valiosa,
+            body.imprimir-licao-unica-adolescentes .verdade-aplicada,
+            body.imprimir-licao-unica-adolescentes .conclusao,
+            body.imprimir-licao-unica-adolescentes .concluindo {
+                break-inside: avoid-page !important;
+                page-break-inside: avoid !important;
+            }
+
+            body.imprimir-licao-unica-adolescentes .respostas-imagem img {
+                max-width: 100% !important;
+                max-height: 120mm !important;
+                object-fit: contain !important;
+            }
+        }
+
+</style>
 </head>
 <body id="topo">
 <header class="site-header">
@@ -655,6 +932,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 1: Obediência, um princípio gerador de bênçãos" decoding="async" loading="lazy" src="assets/capas/licao_01_capa_8k.jpg">
 </figure><h2>Lição 1: Obediência, um princípio gerador de bênçãos</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-01.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 1 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -685,6 +973,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 2: Esaú e Jacó: inveja, rivalidade e ressentimento" decoding="async" loading="lazy" src="assets/capas/licao_02_capa_8k.jpg">
 </figure><h2>Lição 2: Esaú e Jacó: inveja, rivalidade e ressentimento</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-02.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 2 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -722,6 +1021,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 3: Absalão, um exemplo de rebeldia" decoding="async" loading="lazy" src="assets/capas/licao_03_capa_8k.jpg">
 </figure><h2>Lição 3: Absalão, um exemplo de rebeldia</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-03.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 3 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -756,6 +1066,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 4: O pecado de Sansão" decoding="async" loading="lazy" src="assets/capas/licao_04_capa_8k.jpg">
 </figure><h2>Lição 4: O pecado de Sansão</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-04.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 4 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -782,6 +1103,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 5: Timóteo, um exemplo de fé" decoding="async" loading="lazy" src="assets/capas/licao_05_capa_8k.jpg">
 </figure><h2>Lição 5: Timóteo, um exemplo de fé</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-05.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 5 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -817,6 +1149,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 6: Tal pai, tal filho?" decoding="async" loading="lazy" src="assets/capas/licao_06_capa_8k.jpg">
 </figure><h2>Lição 6: Tal pai, tal filho?</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-06.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 6 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -850,6 +1193,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 7: Salomão, o sábio que se tornou insensato" decoding="async" loading="lazy" src="assets/capas/licao_07_capa_8k.jpg">
 </figure><h2>Lição 7: Salomão, o sábio que se tornou insensato</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-07.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 7 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -882,6 +1236,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 8: José e seus irmãos" decoding="async" loading="lazy" src="assets/capas/licao_08_capa_8k.jpg">
 </figure><h2>Lição 8: José e seus irmãos</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-08.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 8 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -913,6 +1278,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 9: Samuel, o jovem sacerdote" decoding="async" loading="lazy" src="assets/capas/licao_09_capa_8k.jpg">
 </figure><h2>Lição 9: Samuel, o jovem sacerdote</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-09.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 9 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -943,6 +1319,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 10: Os insensatos filhos de Eli" decoding="async" loading="lazy" src="assets/capas/licao_10_capa_8k.jpg">
 </figure><h2>Lição 10: Os insensatos filhos de Eli</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-10.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 10 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -969,6 +1356,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 11: Jônatas e Davi, amigos fiéis" decoding="async" loading="lazy" src="assets/capas/licao_11_capa_8k.jpg">
 </figure><h2>Lição 11: Jônatas e Davi, amigos fiéis</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-11.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 11 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -1001,6 +1399,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 12: Roboão, um rei tolo" decoding="async" loading="lazy" src="assets/capas/licao_12_capa_8k.jpg">
 </figure><h2>Lição 12: Roboão, um rei tolo</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-12.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 12 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -1030,6 +1439,17 @@
 <figure class="lesson-cover">
 <img alt="Capa da Lição 13: A contenda de Miriã e Arão" decoding="async" loading="lazy" src="assets/capas/licao_13_capa_8k.jpg">
 </figure><h2>Lição 13: A contenda de Miriã e Arão</h2>
+<div class="acoes-licao-adolescentes" aria-label="Ações desta lição">
+<span class="rotulo-acoes">Ações desta lição</span>
+<button class="acao-licao-adolescentes copiar" data-acao-licao="copiar" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="11" rx="2" width="11" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span>Copiar lição inteira</span>
+</button>
+<button class="acao-licao-adolescentes imprimir" data-acao-licao="imprimir" type="button" title="Salvar ou imprimir somente esta lição em folha A4">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span>Salvar / imprimir em A4</span>
+</button>
+</div>
 <p class="linha-apoio-adolescentes"><a class="btn-apoio-adolescentes" href="apoios/licao-13.html" target="_blank" rel="noopener" aria-label="Abrir apoio pedagógico da lição 13 em nova aba">Abrir apoio pedagógico</a></p><div class="lesson-toolbar">
 <a href="#sumario">↑ Voltar ao sumário</a>
 </div>
@@ -1078,5 +1498,152 @@
             updateProgress();
         })();
     </script>
+
+<script>
+/* ============================================================
+   AÇÕES INDIVIDUAIS DAS LIÇÕES — ADOLESCENTES
+   ============================================================ */
+(function () {
+    'use strict';
+
+    var tituloOriginal = document.title;
+    var alvoAtual = null;
+    var temporizadorAviso = null;
+
+    function obterAviso() {
+        var aviso = document.querySelector('.aviso-copia-adolescentes');
+        if (!aviso) {
+            aviso = document.createElement('div');
+            aviso.className = 'aviso-copia-adolescentes';
+            aviso.setAttribute('role', 'status');
+            aviso.setAttribute('aria-live', 'polite');
+            document.body.appendChild(aviso);
+        }
+        return aviso;
+    }
+
+    function mostrarAviso(mensagem) {
+        var aviso = obterAviso();
+        aviso.textContent = mensagem;
+        aviso.classList.add('visivel');
+        window.clearTimeout(temporizadorAviso);
+        temporizadorAviso = window.setTimeout(function () {
+            aviso.classList.remove('visivel');
+        }, 2600);
+    }
+
+    function textoDaLicao(licao) {
+        var copia = licao.cloneNode(true);
+        copia.querySelectorAll('.acoes-licao-adolescentes, .linha-apoio-adolescentes, .lesson-toolbar, .lesson-navigation, button, script').forEach(function (elemento) {
+            elemento.remove();
+        });
+
+        var areaTemporaria = document.createElement('div');
+        areaTemporaria.style.position = 'fixed';
+        areaTemporaria.style.left = '-10000px';
+        areaTemporaria.style.top = '0';
+        areaTemporaria.style.width = '800px';
+        areaTemporaria.appendChild(copia);
+        document.body.appendChild(areaTemporaria);
+
+        var texto = (areaTemporaria.innerText || areaTemporaria.textContent || '')
+            .replace(/\u00a0/g, ' ')
+            .replace(/[ \t]+\n/g, '\n')
+            .replace(/\n{3,}/g, '\n\n')
+            .trim();
+
+        areaTemporaria.remove();
+        return texto;
+    }
+
+    function copiarComFallback(texto) {
+        var campo = document.createElement('textarea');
+        campo.value = texto;
+        campo.setAttribute('readonly', '');
+        campo.style.position = 'fixed';
+        campo.style.left = '-9999px';
+        document.body.appendChild(campo);
+        campo.select();
+        var resultado = document.execCommand('copy');
+        campo.remove();
+        return resultado;
+    }
+
+    function copiarLicao(licao, botao) {
+        var texto = textoDaLicao(licao);
+        var numero = licao.getAttribute('data-lesson') || ((licao.id.match(/\d+/) || [''])[0]);
+        var rotulo = botao.querySelector('span');
+        var rotuloOriginal = rotulo ? rotulo.textContent : '';
+
+        botao.disabled = true;
+
+        function sucesso() {
+            if (rotulo) rotulo.textContent = 'Lição copiada';
+            mostrarAviso('Lição ' + numero + ' copiada por inteiro.');
+            window.setTimeout(function () {
+                if (rotulo) rotulo.textContent = rotuloOriginal;
+                botao.disabled = false;
+            }, 1800);
+        }
+
+        function falha() {
+            mostrarAviso('Não foi possível copiar automaticamente. Tente novamente.');
+            botao.disabled = false;
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(texto).then(sucesso).catch(function () {
+                copiarComFallback(texto) ? sucesso() : falha();
+            });
+        } else {
+            copiarComFallback(texto) ? sucesso() : falha();
+        }
+    }
+
+    function limparImpressao() {
+        document.body.classList.remove('imprimir-licao-unica-adolescentes');
+        if (alvoAtual) alvoAtual.classList.remove('alvo-impressao-adolescentes');
+        alvoAtual = null;
+        document.title = tituloOriginal;
+    }
+
+    function imprimirLicao(licao) {
+        limparImpressao();
+
+        var numero = licao.getAttribute('data-lesson') || ((licao.id.match(/\d+/) || [''])[0]);
+        var tituloElemento = licao.querySelector('h2');
+        var tituloCompleto = tituloElemento ? tituloElemento.textContent.trim() : ('Lição ' + numero);
+        var titulo = tituloCompleto.replace(/^Lição\s+\d+\s*:\s*/i, '').trim();
+
+        alvoAtual = licao;
+        alvoAtual.classList.add('alvo-impressao-adolescentes');
+        document.body.classList.add('imprimir-licao-unica-adolescentes');
+        document.title = 'Lição ' + numero + ' - ' + titulo + ' - Adolescentes';
+
+        window.requestAnimationFrame(function () {
+            window.requestAnimationFrame(function () {
+                window.print();
+            });
+        });
+    }
+
+    document.addEventListener('click', function (evento) {
+        var botao = evento.target.closest('[data-acao-licao]');
+        if (!botao) return;
+
+        var licao = botao.closest('.lesson');
+        if (!licao) return;
+
+        if (botao.dataset.acaoLicao === 'copiar') {
+            copiarLicao(licao, botao);
+        } else if (botao.dataset.acaoLicao === 'imprimir') {
+            imprimirLicao(licao);
+        }
+    });
+
+    window.addEventListener('afterprint', limparImpressao);
+})();
+</script>
+
 </body>
 </html>
